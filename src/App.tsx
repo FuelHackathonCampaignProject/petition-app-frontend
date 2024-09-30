@@ -14,7 +14,7 @@ import {
   useFuel
 } from '@fuels/react';
 
-const CONTRACT_ID = 'your-contract-address'; //Replace with your contract address
+const CONTRACT_ID = '';
 
 function App() {
   const [showModal, setShowModal] = useState(false);
@@ -70,7 +70,7 @@ function convertBNToDate(timestampBN: BN | undefined): string | null {
   const dateObject = new Date(numericValueInMilliseconds); 
   // Format the date and time using toLocaleString with appropriate options
   return dateObject.toLocaleString('en-US');
-  } 
+} 
 
 //Function to create campaign
 async function createCampaign(deadline: number) {
