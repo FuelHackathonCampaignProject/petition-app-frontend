@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
-import { PetitionContractAbi__factory } from './contracts';
+// import { PetitionContractAbi__factory } from './contracts';
 import { DateTime} from '@fuel-ts/utils';
 import { Provider,BN } from 'fuels';
 import CreateCampaignForm from './CreateCampaignForm';
@@ -14,7 +14,7 @@ import {
   useFuel
 } from '@fuels/react';
 
-const CONTRACT_ID = '';
+const CONTRACT_ID = '0xbb4e8da7094952fb146f4b6bee79e3ec33e1986b41e85d24c1be085f24c77d71';
 
 function App() {
   const [showModal, setShowModal] = useState(false);
@@ -177,7 +177,7 @@ async function createCampaign(deadline: number) {
             <PetitionForm onSubmit={campaignInfo} label="Info" action="view campaign info" />
             <PetitionForm onSubmit={unsignPetition} label="Unsign" action="unsign" />
             <PetitionForm onSubmit={cancelPetition} label="Cancel" action="cancel" />
-            <p className="footer-text">Powered by <a className="ref-link" href="http://metaschool.so/" target="_blank" rel="noopener noreferrer">metaschool 🔮</a></p>
+
           </div>
         </main>
       )}
