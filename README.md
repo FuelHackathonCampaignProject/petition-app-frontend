@@ -44,3 +44,13 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+
+[//]: # (this was the error we got when generating our contract folder in order to communicate with our frontend)
+Building..
+Building Sway programs using: 'forc'
+warning: unused manifest key: toolchain
+warning: unused manifest key: components
+Generating types..
+Cannot read properties of undefined (reading 'forEach')
+

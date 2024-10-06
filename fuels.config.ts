@@ -1,11 +1,17 @@
 import { createConfig } from 'fuels';
+import dotenv from 'dotenv';
+// import { providerUrl } from "./src/lib";
 
-export default createConfig({
-  contracts: ['../petition-contract'],
-  output: './src/contracts/',
+dotenv.config({
+  path: ['.env.local', '.env'],
 });
 
-/**
- * Check the docs:
- * https://fuellabs.github.io/fuels-ts/guide/cli/config-file
- */
+// If your node is running on a port other than 4000, you can set it here
+const fuelCorePort = +(process.env.VITE_FUEL_NODE_PORT as string) || 4000;
+
+export default createConfig({
+  contracts: ['../petition-contract'], // Path to your Sway workspace
+  output: './src/sway-api', // Where your generated types will be saved
+  fuelCorePort,
+
+});

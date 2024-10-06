@@ -158,7 +158,7 @@ async function createCampaign(deadline: number) {
   }
   return (
     <div className="App">
-        <h1>Petition dApp</h1>
+        <h1>Fuel Petition dApp</h1>
         {isConnected ? (
           <button onClick={disconnect_wallet} className="disconnect-button">
             Disconnect Wallet
@@ -172,20 +172,20 @@ async function createCampaign(deadline: number) {
         <main className="App-main">
           <CreateCampaignForm onSubmit={createCampaign} />
           <div className="form-container">
-            <PetitionForm onSubmit={signPetition} label="Sign" action="sign" />
-            <PetitionForm onSubmit={endCampaign} label="End" action="end campaign" />
-            <PetitionForm onSubmit={campaignInfo} label="Info" action="view campaign info" />
-            <PetitionForm onSubmit={unsignPetition} label="Unsign" action="unsign" />
-            <PetitionForm onSubmit={cancelPetition} label="Cancel" action="cancel" />
-
+            <PetitionForm onSubmit={signPetition} label="Sign" action="sign"/>
+            <PetitionForm onSubmit={endCampaign} label="End" action="end campaign"/>
+            <PetitionForm onSubmit={campaignInfo} label="Info" action="view campaign info"/>
+            <PetitionForm onSubmit={unsignPetition} label="Unsign" action="unsign"/>
+            <PetitionForm onSubmit={cancelPetition} label="Cancel" action="cancel"/>
+            <p className="footer-text">Built for Encode X Fuel Network Hackathon <a className="ref-link" href="https://fuel.network/" target="_blank" rel="noopener noreferrer">Fuel Network</a></p>
           </div>
         </main>
       )}
       <Modal
-        show={showModal}
-        title={modalTitle}
-        content={<pre>{modalContent}</pre>}
-        onClose={() => setShowModal(false)}
+          show={showModal}
+          title={modalTitle}
+          content={<pre>{modalContent}</pre>}
+          onClose={() => setShowModal(false)}
       />
     </div>
   );
